@@ -11,7 +11,7 @@ import utility.ExcelUtility;
 
 public class SubCategoryTest extends Base {
 	
-	@Test
+	@Test(description="this is for creating a subcategory for a category",groups = {"regression"} )
 	
 	public void verifyUserAbletoCreateSubCategory()
 	{
@@ -26,7 +26,8 @@ public class SubCategoryTest extends Base {
 	    subcategorypage.subcategorylinkclick();
 	    subcategorypage.clickNewSubCategory();
 	    subcategorypage.entersubcategoryvalue();
-	    subcategorypage.categoryselect();
+	    String categoryname = ExcelUtility.getString(1, 0, "CategoryValue");
+	    subcategorypage.categoryselect(categoryname);
 	    subcategorypage.uploadImage(filepath);
 	    subcategorypage.saveSubcategory();
 	    boolean alertDisplayed =subcategorypage.isSaveAlertAvailable();

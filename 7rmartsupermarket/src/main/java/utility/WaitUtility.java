@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -70,13 +71,54 @@ public class WaitUtility {
 	
 }
 	
-	public void fluentwaitalertIsPresent(WebDriver driver,WebElement target)
+	public void fluentwaitElementToBEClickable(WebDriver driver,WebElement target)
 	{
 		Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
                 .withTimeout(Duration.ofSeconds(FLUENTTIMEOUT))
                 .pollingEvery(Duration.ofSeconds(POLLINGTIME))
                 .ignoring(NoSuchElementException.class);
 		fluentWait.until(ExpectedConditions.elementToBeClickable(target));
+	 
+	}
+	
+	
+	public void fluentwaitalertIsPresent(WebDriver driver)
+	{
+		Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
+                .withTimeout(Duration.ofSeconds(FLUENTTIMEOUT))
+                .pollingEvery(Duration.ofSeconds(POLLINGTIME))
+                .ignoring(NoSuchElementException.class);
+		fluentWait.until(ExpectedConditions.alertIsPresent());
+	 
+	}
+	
+	public void fluentwaitelementToBeSelected(WebDriver driver,WebElement target)
+	{
+		Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
+                .withTimeout(Duration.ofSeconds(FLUENTTIMEOUT))
+                .pollingEvery(Duration.ofSeconds(POLLINGTIME))
+                .ignoring(NoSuchElementException.class);
+		fluentWait.until(ExpectedConditions.elementToBeSelected(target));
+	 
+	}
+	
+	public void fluentwaitinvisibilityOfElementLocated(WebDriver driver,String target)
+	{
+		Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
+                .withTimeout(Duration.ofSeconds(FLUENTTIMEOUT))
+                .pollingEvery(Duration.ofSeconds(POLLINGTIME))
+                .ignoring(NoSuchElementException.class);
+		fluentWait.until(ExpectedConditions.invisibilityOfElementLocated(By.id(target)));
+	 
+	}
+	
+	public void fluentwaitinvisibilityOfElementLocatedByClass(WebDriver driver,String target)
+	{
+		Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
+                .withTimeout(Duration.ofSeconds(FLUENTTIMEOUT))
+                .pollingEvery(Duration.ofSeconds(POLLINGTIME))
+                .ignoring(NoSuchElementException.class);
+		fluentWait.until(ExpectedConditions.invisibilityOfElementLocated(By.className(target)));
 	 
 	}
 	

@@ -44,6 +44,13 @@ public class PageUtility {
   	  select.selectByVisibleText(text);
     }
     
+    public void dropdownSelectbyTIndex(WebElement element,int index)
+    {
+    	
+      Select select = new Select(element);
+  	  select.selectByIndex(index);
+    }
+    
 	
 	
 	

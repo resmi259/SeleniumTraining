@@ -9,7 +9,7 @@ import pages.ManageContactPage;
 
 public class ManageContactTest extends Base {
 	
-	@Test
+	@Test (description="this is for editing  address of a contact",groups = {"smoke"} )
 	public void VerifythatUserisAbletoUpdatetheContact()
 	{
 		String userNameValue ="admin";

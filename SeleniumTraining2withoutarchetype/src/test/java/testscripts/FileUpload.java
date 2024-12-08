@@ -11,6 +11,8 @@ import org.openqa.selenium.WebElement;
 
 public class FileUpload extends Base {
 	
+	//when type =file and input header 
+	
 	public void  verifyFileUploadusingSendKeys()
 	{
 		driver.navigate().to("https://demo.guru99.com/test/upload/");

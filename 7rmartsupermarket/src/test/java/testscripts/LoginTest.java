@@ -2,13 +2,15 @@ package testscripts;
 
 
 import static org.testng.Assert.assertTrue;
+
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import utility.ExcelUtility;
 
 public class LoginTest extends Base {
 	
-	@Test
+	@Test(description="this is for successful login",groups= {"smoke","regression"},priority=1)
 	public void verifyUserLoginWithCorrectUsernameAndPassword()
 	
 	{   String userNameValue =ExcelUtility.getString(1, 0, "LoginPage");
@@ -21,7 +23,7 @@ public class LoginTest extends Base {
 		assertTrue(isInHomePage,"User is not able to login with valid username and password");
         		
 	}
-	@Test
+	@Test(description="this is for login with invalid password",groups= {"smoke"},priority=2)
 	public void verifyUserLoginwithvalidUsernameAndInValidPassword()
 	
 	{
@@ -35,7 +37,7 @@ public class LoginTest extends Base {
 			assertTrue( alertdisplay,"User is able to login with wrong password");
 						
 	}
-	@Test
+	@Test(description="this is for login with invalid username",groups= {"regression"})
 	
     public void verifyUserLoginwithInvalidUsernameAndValidPassword()
 	
@@ -51,12 +53,11 @@ public class LoginTest extends Base {
 					
 							
 	}
-	@Test
-    public void verifyUserLoginwithInvalidUsernameAndInValidPassword()
+	@Test(description="this is for login with invalid username",groups = {"regression"} ,dataProvider="InvalidLogInData")
+    public void verifyUserLoginwithInvalidUsernameAndInValidPassword(String userNameValue,String passwordValue)
 	
 	{
-		    String userNameValue =ExcelUtility.getString(4, 0, "LoginPage");
-		    String passwordValue =ExcelUtility.getString(4, 1, "LoginPage");
+
 			LoginPage loginpage =new LoginPage(driver);
 			loginpage.enterUsernameOnUsernameField(userNameValue);
 		    loginpage.enterPassWordonPassWordField(passwordValue);
@@ -64,6 +65,17 @@ public class LoginTest extends Base {
 		    boolean alertdisplay = loginpage.isAlertDisplayed();
 		    assertTrue( alertdisplay,"User is able to login with wrong username and wrong password");
 						
+	}
+	@DataProvider(name="InvalidLogInData")
+	public Object[][] getDataFromDataProvider()
+	{
+		return new Object[][] {   
+			
+			new Object[] {"abc","abc"},
+			new Object[] {"123","123"}
+			
+		};
+		
 	}
 
 }

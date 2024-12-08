@@ -41,9 +41,9 @@ public class SubCategoryPage {
     {
     	newLink.click();
     }
-    public void categoryselect()
+    public void categoryselect(String categoryname)
     {
-    	pageutility.dropdownSelectbyText(categoryDropdown, "Grains");
+    	pageutility.dropdownSelectbyText(categoryDropdown, categoryname);
     	  
     }
     

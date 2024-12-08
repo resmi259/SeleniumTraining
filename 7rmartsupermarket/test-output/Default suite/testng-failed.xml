@@ -3,16 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testscripts.LoginTest">
+      <class name="testscripts.ManageCategoryTest">
         <methods>
-          <include name="closeBrowser"/>
           <include name="initialiseBrowser"/>
-          <include name="verifyUserLoginwithInvalidUsernameAndValidPassword"/>
-          <include name="verifyUserLoginwithvalidUsernameAndInValidPassword"/>
-          <include name="verifyUserLoginwithInvalidUsernameAndInValidPassword"/>
-          <include name="verifyUserLoginWithCorrectUsernameAndPassword"/>
+          <include name="verifyThatUserIsAbletoSearchACategory"/>
+          <include name="driverQuit"/>
         </methods>
-      </class> <!-- testscripts.LoginTest -->
+      </class> <!-- testscripts.ManageCategoryTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
