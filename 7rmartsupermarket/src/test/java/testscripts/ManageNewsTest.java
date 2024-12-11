@@ -9,20 +9,18 @@ import utility.ExcelUtility;
 
 public class ManageNewsTest extends Base {
 	
-@Test(description ="this is for adding news",groups = {"regression"})
+@Test(description ="this is for adding news",groups = {"regression"},retryAnalyzer=retry.Retry.class)
 
 public void verifythatUserIsAbletoAddNews()
 {
-	String userNameValue ="admin";
-    String passwordValue ="admin";
+	String userNameValue =ExcelUtility.getString(1, 0, "LoginPage");
+	String passwordValue =ExcelUtility.getString(1, 1, "LoginPage");
+	String news = ExcelUtility.getString(1, 0, "ManageNews");
     LoginPage loginpage = new LoginPage(driver);
-	loginpage.enterUsernameOnUsernameField(userNameValue);
-    loginpage.enterPassWordonPassWordField(passwordValue);
-    loginpage.clickSignIn();  
+	loginpage.enterUsernameOnUsernameField(userNameValue).enterPassWordonPassWordField(passwordValue).clickSignIn();  
     ManageNewsPage managenewspage = new ManageNewsPage(driver);
     managenewspage.clickManagenews();
     managenewspage.clickNew();
-    String news = ExcelUtility.getString(1, 0, "ManageNews");
     managenewspage.enterNews(news);
     managenewspage.saveNews(news);
     boolean successMessageDisplayed =managenewspage.checksavesuccessful();

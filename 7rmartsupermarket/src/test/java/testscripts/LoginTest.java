@@ -10,34 +10,30 @@ import utility.ExcelUtility;
 
 public class LoginTest extends Base {
 	
-	@Test(description="this is for successful login",groups= {"smoke","regression"},priority=1)
+	@Test(description="this is for successful login",groups= {"smoke","regression"},priority=1,retryAnalyzer=retry.Retry.class)
 	public void verifyUserLoginWithCorrectUsernameAndPassword()
 	
 	{   String userNameValue =ExcelUtility.getString(1, 0, "LoginPage");
 	    String passwordValue =ExcelUtility.getString(1, 1, "LoginPage");
 		LoginPage loginpage =new LoginPage(driver);
-		loginpage.enterUsernameOnUsernameField(userNameValue);
-	    loginpage.enterPassWordonPassWordField(passwordValue);
-	    loginpage.clickSignIn();  
+		loginpage.enterUsernameOnUsernameField(userNameValue).enterPassWordonPassWordField(passwordValue).clickSignIn();
 		boolean isInHomePage =loginpage.isHomePageAvailable();
 		assertTrue(isInHomePage,"User is not able to login with valid username and password");
         		
 	}
-	@Test(description="this is for login with invalid password",groups= {"smoke"},priority=2)
+	@Test(description="this is for login with invalid password",groups= {"smoke"},priority=2,retryAnalyzer=retry.Retry.class)
 	public void verifyUserLoginwithvalidUsernameAndInValidPassword()
 	
 	{
 		    String userNameValue =ExcelUtility.getString(2, 0, "LoginPage");
 		    String passwordValue =ExcelUtility.getString(2, 1, "LoginPage");
 			LoginPage loginpage =new LoginPage(driver);
-			loginpage.enterUsernameOnUsernameField(userNameValue);
-		    loginpage.enterPassWordonPassWordField(passwordValue);
-		    loginpage.clickSignIn(); 
+			loginpage.enterUsernameOnUsernameField(userNameValue).enterPassWordonPassWordField(passwordValue).clickSignIn();
 		    boolean alertdisplay = loginpage.isAlertDisplayed();		    
 			assertTrue( alertdisplay,"User is able to login with wrong password");
 						
 	}
-	@Test(description="this is for login with invalid username",groups= {"regression"})
+	@Test(description="this is for login with invalid username",groups= {"regression"},retryAnalyzer=retry.Retry.class)
 	
     public void verifyUserLoginwithInvalidUsernameAndValidPassword()
 	
@@ -45,23 +41,19 @@ public class LoginTest extends Base {
 		    String userNameValue =ExcelUtility.getString(3, 0, "LoginPage");
 		    String passwordValue =ExcelUtility.getString(3, 1, "LoginPage");
 			LoginPage loginpage =new LoginPage(driver);
-			loginpage.enterUsernameOnUsernameField(userNameValue);
-		    loginpage.enterPassWordonPassWordField(passwordValue);
-		    loginpage.clickSignIn(); 
+			loginpage.enterUsernameOnUsernameField(userNameValue).enterPassWordonPassWordField(passwordValue).clickSignIn();
 		    boolean alertdisplay = loginpage.isAlertDisplayed();		    
 			assertTrue( alertdisplay,"User is able to login  with wrong username");
 					
 							
 	}
-	@Test(description="this is for login with invalid username",groups = {"regression"} ,dataProvider="InvalidLogInData")
+	@Test(description="this is for login with invalid username",groups = {"regression"} ,dataProvider="InvalidLogInData",retryAnalyzer=retry.Retry.class)
     public void verifyUserLoginwithInvalidUsernameAndInValidPassword(String userNameValue,String passwordValue)
 	
 	{
 
 			LoginPage loginpage =new LoginPage(driver);
-			loginpage.enterUsernameOnUsernameField(userNameValue);
-		    loginpage.enterPassWordonPassWordField(passwordValue);
-		    loginpage.clickSignIn(); 
+			loginpage.enterUsernameOnUsernameField(userNameValue).enterPassWordonPassWordField(passwordValue).clickSignIn();
 		    boolean alertdisplay = loginpage.isAlertDisplayed();
 		    assertTrue( alertdisplay,"User is able to login with wrong username and wrong password");
 						
@@ -71,7 +63,7 @@ public class LoginTest extends Base {
 	{
 		return new Object[][] {   
 			
-			new Object[] {"abc","abc"},
+			new Object[] {ExcelUtility.getString(3, 0, "LoginPage"),ExcelUtility.getString(3, 1, "LoginPage")},
 			new Object[] {"123","123"}
 			
 		};

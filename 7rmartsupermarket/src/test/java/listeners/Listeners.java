@@ -10,12 +10,12 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import testscripts.Base;
-import utility.ExtendUtility;
+import utility.ExtentUtility;
 
 public class Listeners extends Base implements ITestListener {
 	ExtentTest test;
 
-	ExtentReports extent = ExtendUtility.createExtentReports();
+	ExtentReports extent = ExtentUtility.createExtentReports();
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 	
 

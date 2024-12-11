@@ -22,7 +22,8 @@ public class ManageContactPage {
 	}
 	
 	@FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']//tbody//tr[1]/td[6]") private WebElement editButton;
-	@FindBy(xpath="//p[text()='Manage Contact']") private WebElement manageContactLink;
+	@FindBy(xpath="//p[text()='Manage Contact']//following::i[2]") private WebElement manageContactLink;
+	
 	@FindBy(xpath="//textarea[@name=\"address\"]") private WebElement addressInputField;
 	@FindBy(xpath="//button[@name='Update']") private WebElement updateButton;
 	@FindBy(xpath="//div[contains (@class,'alert-success')]") private WebElement saveAlert;

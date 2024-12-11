@@ -62,10 +62,7 @@ public class CategoryPage {
 			
 	public void saveCategory()
 	{
-	 waitutility.waitForElement(driver, categorySave);
-	 pageutility.scrollByAxis(driver);
-	 //pageutility.scrollByelement(driver, categorySave);
-	 pageutility.scrollByelement(driver, topMenu);
+	 pageutility.scrollToEnd(driver);
 	 categorySave.click();
 		 
     	}

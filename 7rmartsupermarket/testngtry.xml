@@ -8,12 +8,8 @@
 </listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testscripts.LoginTest">
-      <methods>
-       <include name="verifyUserLoginWithCorrectUsernameAndPassword"></include>
-       <include name="verifyUserLoginwithvalidUsernameAndInValidPassword"></include>
-             </methods>
-              </class>    
+           <class name="testscripts.AdminUsersTest">
+      </class>       
         </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

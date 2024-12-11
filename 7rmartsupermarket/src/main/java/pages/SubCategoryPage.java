@@ -32,42 +32,49 @@ public class SubCategoryPage {
 	@FindBy(xpath="//div[contains(@class,'alert-succes')]") private WebElement saveAlert;
 
 	
-    public void subcategorylinkclick()
+    public SubCategoryPage subcategorylinkclick()
     {
     	subcategoryLink.click();
+    	return this;
     }
     
-    public void clickNewSubCategory()
+    public SubCategoryPage clickNewSubCategory()
     {
     	newLink.click();
+     	return this;
     }
-    public void categoryselect(String categoryname)
+    public SubCategoryPage categoryselect(String categoryname)
     {
     	pageutility.dropdownSelectbyText(categoryDropdown, categoryname);
+     	return this;
     	  
     }
     
-    public void entersubcategoryvalue()
+    public SubCategoryPage entersubcategoryvalue()
     
     {  
     	String categoryNameRn= randomutility.createaFirstName();
        subcategoryInputField.sendKeys(categoryNameRn);
+    	return this;
     	
     }
     
-    public void uploadImage(String filepath)
+    public SubCategoryPage uploadImage(String filepath)
     {
     	fileuploadutility.verifyFileUploadusingSendKeys(imageUpload, filepath);
+     	return this;
     }
 
-    public void saveSubcategory()
+    public SubCategoryPage saveSubcategory()
     {
     	subcategorySavebutton.click();
+     	return this;
     }
     public boolean isSaveAlertAvailable()
     
     {
     	boolean saveAlterDisplayed =saveAlert.isDisplayed();
     	return saveAlterDisplayed ;
+    	
     }
 }

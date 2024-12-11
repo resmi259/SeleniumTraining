@@ -11,8 +11,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
-import freemarker.template.SimpleDate;
-
 public class ScreenshotUtility {
 
 	public void getScreenshot(WebDriver driver,String failedTestCaseName) throws IOException

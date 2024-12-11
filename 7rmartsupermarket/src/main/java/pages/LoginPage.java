@@ -22,17 +22,20 @@ public class LoginPage {
 	@FindBy(xpath="//div[contains(@class,'alert-danger')]") private WebElement alert;
 	
 	
-	public void enterUsernameOnUsernameField(String username)
+	public LoginPage enterUsernameOnUsernameField(String username)
 	{
 		userNameField.sendKeys(username);
+		return this;
 	}
-	public void enterPassWordonPassWordField(String password)
+	public LoginPage enterPassWordonPassWordField(String password)
 	{
 		passWordField.sendKeys(password);
+		return this;
 	}
-	public void clickSignIn()
+	public LoginPage clickSignIn()
 	{
 		signInButton.click();
+		return this;
 	}
 	public boolean isHomePageAvailable()
 	{

@@ -7,12 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import utility.PageUtility;
 
-public class ManageCategory {
+public class ManageCategoryPage {
 	
 	public WebDriver driver;
 	PageUtility pageutility =new PageUtility();
 	
-	public ManageCategory(WebDriver driver)
+	public ManageCategoryPage(WebDriver driver)
 	{
 		this.driver=driver;
 		PageFactory.initElements(driver, this);

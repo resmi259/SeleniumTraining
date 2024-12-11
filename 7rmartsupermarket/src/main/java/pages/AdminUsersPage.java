@@ -6,21 +6,22 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utility.PageUtility;
+import utility.RandomUtility;
 
-public class AdminUsers {
+public class AdminUsersPage {
 	
 	WebDriver driver ;
-	PageUtility pageutility;
+	PageUtility pageutility = new PageUtility();
+	RandomUtility randomutility = new RandomUtility();
 	
-	public  AdminUsers (WebDriver driver)
+	public  AdminUsersPage (WebDriver driver)
 	{
 		this.driver =driver;
 		PageFactory.initElements(driver, this);
 	}
 
 	
-	@FindBy(xpath ="//li[@class='nav-item has-treeview menu-open']//descendant::i[@class=\"fas fa-angle-left right\"]") private WebElement adminUserlink;
-	@FindBy(xpath ="//p[text()='Manage Users']") private WebElement manageUserLink;
+	@FindBy(xpath ="//p[text()='Admin Users']//following::i[2]") private WebElement adminUserlink;
 	@FindBy(xpath="//a[@onclick=\"click_button(1)\"]")  private WebElement createnewcontactbutton;
 	@FindBy(xpath="//input[@id='username']")  private WebElement userNameInputField;
 	@FindBy(xpath="//input[@id='password']")  private WebElement passwordInputField;
@@ -28,38 +29,40 @@ public class AdminUsers {
 	@FindBy(xpath="//button[@name='Create']")  private WebElement savebutton;
 	@FindBy(xpath="//div[contains(@class,'alert alert-success alert-dismissible')]") private WebElement alert;
 	
-	public void adminUserlinkClick()
+	public AdminUsersPage adminUserlinkClick()
 	{
 		adminUserlink.click();
-		
-	}
-	
-	public void manageUserlinkClick()
-	{
-		manageUserLink.click();
-		
-	}
-	
-	public void createnewClick()
+		return this;
+		}	
+
+	public AdminUsersPage createnewClick()
 	{
 		createnewcontactbutton.click();
+		return this;
 	}
-	public void enterUserName(String username)
-	{
-		userNameInputField.sendKeys(username);	
+	public AdminUsersPage enterUserName(String username)
+	
+	{   String userName= randomutility.createaFirstName();
+		userNameInputField.sendKeys(userName);	
+		return this;
 	}
-	public void enterPassWord(String password)
+	public AdminUsersPage enterPassWord(String password)
 	{
 		passwordInputField.sendKeys(password);	
+		
+		return this;
 	}
 	
-	public void selectuserTypeDropdown()
+	public AdminUsersPage selectuserTypeDropdown(String usertypevalue)
 	{
-		pageutility.dropdownSelectbyTIndex(userTypeDropdown, 1);	
+		
+		pageutility.dropdownSelectbyText(userTypeDropdown, usertypevalue);
+		return this;
 	}
-	public void clickSave()
+	public AdminUsersPage clickSave()
 	{
 		savebutton.click();
+		return this;
 	}
 	public boolean isalertDisplayed()
 	{

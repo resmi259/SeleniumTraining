@@ -27,7 +27,15 @@ public class PageUtility {
 	
 	{
 		 JavascriptExecutor js =(JavascriptExecutor) driver;
-		 js.executeScript("window.scrollBy(400,2000)", "");
+		 js.executeScript("window.scrollBy(0,350)", "");
+		 	 
+	}
+	
+public void scrollToEnd(WebDriver driver)
+	
+	{
+		 JavascriptExecutor js =(JavascriptExecutor) driver;
+		 js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 		 
 	}
     public void scrollByelement(WebDriver driver,WebElement element)
@@ -44,12 +52,22 @@ public class PageUtility {
   	  select.selectByVisibleText(text);
     }
     
-    public void dropdownSelectbyTIndex(WebElement element,int index)
+    public void dropdownSelectbyIndex(WebElement element,int index)
     {
     	
       Select select = new Select(element);
   	  select.selectByIndex(index);
     }
+    
+    public void dropdownSelectbyValue(WebElement element,String value)
+    {
+    	
+      Select select = new Select(element);
+  	  select.selectByValue(value);
+    }
+    
+    
+    
     
 	
 	

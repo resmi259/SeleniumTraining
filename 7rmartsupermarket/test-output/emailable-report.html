@@ -9,68 +9,11 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">70,227</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">13,137</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testscripts.AdminUsersTest</td><td><a href="#m0">verifyUserIsAbletoCreateanAdminUser</a></td><td rowspan="1">1733679576948</td><td rowspan="1">11233</td></tr><tr class="failedodd"><td rowspan="1">testscripts.ManageContactTest</td><td><a href="#m1">VerifythatUserisAbletoUpdatetheContact</a></td><td rowspan="1">1733679591536</td><td rowspan="1">12176</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">testscripts.LoginTest</td><td><a href="#m2">verifyUserLoginWithCorrectUsernameAndPassword</a></td><td rowspan="1">1733679555130</td><td rowspan="1">1040</td></tr><tr class="passedeven"><td><a href="#m3">verifyUserLoginwithInvalidUsernameAndInValidPassword</a></td><td rowspan="2">1733679547237</td><td rowspan="2">520</td></tr><tr class="passedeven"><td><a href="#m4">verifyUserLoginwithInvalidUsernameAndInValidPassword</a></td></tr><tr class="passedeven"><td><a href="#m5">verifyUserLoginwithInvalidUsernameAndValidPassword</a></td><td rowspan="1">1733679550360</td><td rowspan="1">1216</td></tr><tr class="passedeven"><td><a href="#m6">verifyUserLoginwithvalidUsernameAndInValidPassword</a></td><td rowspan="1">1733679559889</td><td rowspan="1">635</td></tr><tr class="passedodd"><td rowspan="1">testscripts.ManageCategoryTest</td><td><a href="#m7">verifyThatUserIsAbletoSearchACategory</a></td><td rowspan="1">1733679572089</td><td rowspan="1">2213</td></tr><tr class="passedeven"><td rowspan="1">testscripts.ManageNewsTest</td><td><a href="#m8">verifythatUserIsAbletoAddNews</a></td><td rowspan="1">1733679606759</td><td rowspan="1">2520</td></tr><tr class="passedodd"><td rowspan="1">testscripts.SubCategoryTest</td><td><a href="#m9">verifyUserAbletoCreateSubCategory</a></td><td rowspan="1">1733679563473</td><td rowspan="1">5294</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">testscripts.LoginTest</td><td><a href="#m0">verifyUserLoginWithCorrectUsernameAndPassword</a></td><td rowspan="1">1733843806580</td><td rowspan="1">3103</td></tr><tr class="passedeven"><td><a href="#m1">verifyUserLoginwithvalidUsernameAndInValidPassword</a></td><td rowspan="1">1733843813403</td><td rowspan="1">1120</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">testscripts.AdminUsersTest#verifyUserIsAbletoCreateanAdminUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;nav-item has-treeview menu-open&apos;]//descendant::i[@class=&quot;fas fa-angle-left right&quot;]&quot;}
-  (Session info: chrome=131.0.6778.109)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.26.0&apos;, revision: &apos;8ccf0219d7&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0f268e4d25a486334f66f7e4994933d8, findElement {value=//li[@class=&apos;nav-item has-treeview menu-open&apos;]//descendant::i[@class=&quot;fas fa-angle-left right&quot;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65387}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65387/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0f268e4d25a486334f66f7e4994933d8
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
-	at pages.AdminUsers.adminUserlinkClick(AdminUsers.java:33)
-	at testscripts.AdminUsersTest.verifyUserIsAbletoCreateanAdminUser(AdminUsersTest.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testscripts.ManageContactTest#VerifythatUserisAbletoUpdatetheContact</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=131.0.6778.109)
-Build info: version: &apos;4.26.0&apos;, revision: &apos;8ccf0219d7&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a46049000a7daf81a8fd78e2e6b3af4e, clearElement {id=f.1C4EDDBCA32438BC42CEB14B3214F714.d.A7D346EEAE51CF96F17543F8F6D7A9EE.e.83}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65440}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65440/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (a46049000a7daf81a8fd78e2e6b3af4e)] -&gt; xpath: //textarea[@name=&quot;address&quot;]]
-Session ID: a46049000a7daf81a8fd78e2e6b3af4e
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:129)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy16.clear(Unknown Source)
-	at pages.ManageContactPage.enterAddress(ManageContactPage.java:43)
-	at testscripts.ManageContactTest.VerifythatUserisAbletoUpdatetheContact(ManageContactTest.java:24)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testscripts.LoginTest#verifyUserLoginWithCorrectUsernameAndPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testscripts.LoginTest#verifyUserLoginwithInvalidUsernameAndInValidPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>123</td><td>123</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">testscripts.LoginTest#verifyUserLoginwithInvalidUsernameAndInValidPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>abc</td><td>abc</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">testscripts.LoginTest#verifyUserLoginwithInvalidUsernameAndValidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">testscripts.LoginTest#verifyUserLoginwithvalidUsernameAndInValidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">testscripts.ManageCategoryTest#verifyThatUserIsAbletoSearchACategory</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">testscripts.ManageNewsTest#verifythatUserIsAbletoAddNews</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">testscripts.SubCategoryTest#verifyUserAbletoCreateSubCategory</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">testscripts.LoginTest#verifyUserLoginWithCorrectUsernameAndPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testscripts.LoginTest#verifyUserLoginwithvalidUsernameAndInValidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
