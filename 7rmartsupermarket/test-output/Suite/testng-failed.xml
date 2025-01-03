@@ -7,20 +7,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testscripts.CategoryTest">
+      <class name="testscripts.AdminUsersTest">
         <methods>
           <include name="initialiseBrowser"/>
-          <include name="verifyWhetherUserIsabletoCreateACategory"/>
+          <include name="verifyUserIsAbletoCreateanAdminUser"/>
           <include name="driverQuit"/>
         </methods>
-      </class> <!-- testscripts.CategoryTest -->
-      <class name="testscripts.ManageContactTest">
-        <methods>
-          <include name="initialiseBrowser"/>
-          <include name="VerifythatUserisAbletoUpdatetheContact"/>
-          <include name="driverQuit"/>
-        </methods>
-      </class> <!-- testscripts.ManageContactTest -->
+      </class> <!-- testscripts.AdminUsersTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

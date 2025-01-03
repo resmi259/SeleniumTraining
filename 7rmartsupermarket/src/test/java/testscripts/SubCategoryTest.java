@@ -11,6 +11,9 @@ import utility.ExcelUtility;
 
 public class SubCategoryTest extends Base {
 	
+	LoginPage loginpage;
+	SubCategoryPage subcategorypage;
+	
 	@Test(description="this is for creating a subcategory for a category",groups = {"regression"} ,retryAnalyzer=retry.Retry.class)	
 	public void verifyUserAbletoCreateSubCategory()
 	{
@@ -18,10 +21,8 @@ public class SubCategoryTest extends Base {
 	    String passwordValue =ExcelUtility.getString(1, 1, "LoginPage");
 	    String categoryname = ExcelUtility.getString(1, 0, "CategoryValue");
 	    String filepath =Constants.SUBCATEGORYFILEUPLOAD;
-	    LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUsernameOnUsernameField(userNameValue).enterPassWordonPassWordField(passwordValue).clickSignIn();
-	    SubCategoryPage subcategorypage= new SubCategoryPage(driver);
-	    subcategorypage.subcategorylinkclick().clickNewSubCategory().entersubcategoryvalue().categoryselect(categoryname).uploadImage(filepath).saveSubcategory();
+	    subcategorypage=loginpage.enterUsernameOnUsernameField(userNameValue).enterPassWordonPassWordField(passwordValue).clickSignIn()
+	    .subcategorylinkclick().clickNewSubCategory().entersubcategoryvalue().categoryselect(categoryname).uploadImage(filepath).saveSubcategory();
 	    boolean alertDisplayed =subcategorypage.isSaveAlertAvailable();
 	    assertTrue(alertDisplayed,"User not able to save SubCategory");
 	    

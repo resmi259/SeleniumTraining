@@ -32,10 +32,10 @@ public class LoginPage {
 		passWordField.sendKeys(password);
 		return this;
 	}
-	public LoginPage clickSignIn()
+	public SubCategoryPage clickSignIn()
 	{
 		signInButton.click();
-		return this;
+		return new SubCategoryPage (driver) ;
 	}
 	public boolean isHomePageAvailable()
 	{

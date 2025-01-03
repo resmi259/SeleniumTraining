@@ -1,5 +1,7 @@
 package utility;
 
+import java.util.Random;
+
 import com.github.javafaker.Faker;
 
 public class RandomUtility {
@@ -34,6 +36,14 @@ public class RandomUtility {
 		Faker faker = new Faker();
 		return faker.address().city();
 				
+	}
+	
+	public double randonNumberGenerator()
+	
+	{
+		 Random random = new Random();
+		 return random.nextInt();
+		
 	}
 
 }

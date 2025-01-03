@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>E:\Resmi-Selenium\GITLocal\LocalRepository\7rmartsupermarket\testng.xml</span>
+                    <span>E:\Resmi-Selenium\GITLocal\LocalRepository\7rmartsupermarket\testngtry.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>2 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods,  1 skipped,  1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Retried methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testscripts.AdminUsersTest" class="method navigator-link" hash-for-method="verifyUserIsAbletoCreateanAdminUser">verifyUserIsAbletoCreateanAdminUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +117,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testscripts.LoginTest" class="method navigator-link" hash-for-method="verifyUserLoginWithCorrectUsernameAndPassword">verifyUserLoginWithCorrectUsernameAndPassword</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testscripts.LoginTest" class="method navigator-link" hash-for-method="verifyUserLoginwithvalidUsernameAndInValidPassword">verifyUserLoginwithvalidUsernameAndInValidPassword</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testscripts.AdminUsersTest" class="method navigator-link" hash-for-method="verifyUserIsAbletoCreateanAdminUser">verifyUserIsAbletoCreateanAdminUser</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -123,28 +132,64 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testscripts.LoginTest</span>
+              <img src="skipped.png"/>
+              <span class="class-name">testscripts.AdminUsersTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserLoginWithCorrectUsernameAndPassword">
-                  </a> <!-- verifyUserLoginWithCorrectUsernameAndPassword -->
-                  <span class="method-name">verifyUserLoginWithCorrectUsernameAndPassword</span>
+                  <a name="verifyUserIsAbletoCreateanAdminUser">
+                  </a> <!-- verifyUserIsAbletoCreateanAdminUser -->
+                  <span class="method-name">verifyUserIsAbletoCreateanAdminUser</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,&apos;alert alert-success alert-dismissible&apos;)]&quot;}
+  (Session info: chrome=131.0.6778.140)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.26.0&apos;, revision: &apos;8ccf0219d7&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a1b5a528c267e1f2713001d7a4758c54, findElement {using=xpath, value=//div[contains(@class,&apos;alert alert-success alert-dismissible&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57745}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57745/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a1b5a528c267e1f2713001d7a4758c54
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+	at pages.AdminUsersPage.isalertDisplayed(AdminUsersPage.java:69)
+	at testscripts.AdminUsersTest.verifyUserIsAbletoCreateanAdminUser(AdminUsersTest.java:27)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
                   <em>
-(this is for successful login)                  </em>
+(this is for creating an Admin User)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testscripts.AdminUsersTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserLoginwithvalidUsernameAndInValidPassword">
-                  </a> <!-- verifyUserLoginwithvalidUsernameAndInValidPassword -->
-                  <span class="method-name">verifyUserLoginwithvalidUsernameAndInValidPassword</span>
+                  <a name="verifyUserIsAbletoCreateanAdminUser">
+                  </a> <!-- verifyUserIsAbletoCreateanAdminUser -->
+                  <span class="method-name">verifyUserIsAbletoCreateanAdminUser</span>
                   <em>
-(this is for login with invalid password)                  </em>
+(this is for creating an Admin User)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -152,7 +197,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">E:\Resmi-Selenium\GITLocal\LocalRepository\7rmartsupermarket\testng.xml</span>
+            <span class="header-content">E:\Resmi-Selenium\GITLocal\LocalRepository\7rmartsupermarket\testngtry.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -165,12 +210,7 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testscripts.LoginTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;verifyUserLoginWithCorrectUsernameAndPassword&quot;/&gt;
-          &lt;include name=&quot;verifyUserLoginwithvalidUsernameAndInValidPassword&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- testscripts.LoginTest --&gt;
+      &lt;class name=&quot;testscripts.AdminUsersTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -195,22 +235,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">regression</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">verifyUserLoginWithCorrectUsernameAndPassword</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
               <span class="test-group-name">smoke</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">verifyUserLoginWithCorrectUsernameAndPassword</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">verifyUserLoginwithvalidUsernameAndInValidPassword</span>
+                <span class="method-in-group-name">verifyUserIsAbletoCreateanAdminUser</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -232,18 +260,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyUserLoginWithCorrectUsernameAndPassword')
-data.setCell(0, 2, 'testscripts.LoginTest')
-data.setCell(0, 3, 3103);
+data.setCell(0, 1, 'verifyUserIsAbletoCreateanAdminUser')
+data.setCell(0, 2, 'testscripts.AdminUsersTest')
+data.setCell(0, 3, 13092);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyUserLoginwithvalidUsernameAndInValidPassword')
-data.setCell(1, 2, 'testscripts.LoginTest')
-data.setCell(1, 3, 1120);
+data.setCell(1, 1, 'verifyUserIsAbletoCreateanAdminUser')
+data.setCell(1, 2, 'testscripts.AdminUsersTest')
+data.setCell(1, 3, 2559);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -258,18 +286,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testscripts.LoginTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyUserLoginwithInvalidUsernameAndInValidPassword</span>
-                <br/>
-                <span class="ignored-method-name">verifyUserLoginwithInvalidUsernameAndValidPassword</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -278,30 +297,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testscripts.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testscripts.AdminUsersTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initialiseBrowser(Chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyUserLoginWithCorrectUsernameAndPassword</span>
-                <span class="method-start">4670 ms</span>
+                <span class="method-name">verifyUserIsAbletoCreateanAdminUser</span>
+                <span class="method-start">2695 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">driverQuit([TestResult name=verifyUserLoginWithCorrectUsernameAndPassword status=SUCCESS method=LoginTest.verif...)</span>
-                <span class="method-start">7783 ms</span>
+                <span class="method-name">driverQuit([TestResult name=verifyUserIsAbletoCreateanAdminUser status=SKIP method=AdminUsersTest.verifyUserIsA...)</span>
+                <span class="method-start">15804 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialiseBrowser(Chrome)</span>
-                <span class="method-start">8338 ms</span>
+                <span class="method-start">16233 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyUserLoginwithvalidUsernameAndInValidPassword</span>
-                <span class="method-start">11493 ms</span>
+                <span class="method-name">verifyUserIsAbletoCreateanAdminUser</span>
+                <span class="method-start">18332 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">driverQuit([TestResult name=verifyUserLoginwithvalidUsernameAndInValidPassword status=SUCCESS method=LoginTest....)</span>
-                <span class="method-start">12614 ms</span>
+                <span class="method-name">driverQuit([TestResult name=verifyUserIsAbletoCreateanAdminUser status=SUCCESS method=AdminUsersTest.verifyUser...)</span>
+                <span class="method-start">20894 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

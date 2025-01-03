@@ -23,24 +23,28 @@ public class ManageNewsPage {
 	@FindBy(xpath="//i[@class='icon fas fa-check']") private WebElement aletmessage ;
 
 	
-	public void clickManagenews()
+	public ManageNewsPage clickManagenews()
 	{
 		managenewslink.click();
+		return this;
 	}
 	
-	public void clickNew()
+	public ManageNewsPage clickNew()
 	{
 		newsCreatebutton.click();
+		return this;
 	}
 	
-	public void enterNews(String news)
+	public ManageNewsPage enterNews(String news)
 	{
 		newsInput.sendKeys(news);
+		return this;
 	}
 	
-	public void saveNews(String news)
+	public ManageNewsPage saveNews(String news)
 	{
 		newsSavebutton.click();
+		return this;
 	}
 	
 	public boolean checksavesuccessful()

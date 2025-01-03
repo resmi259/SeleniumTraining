@@ -22,7 +22,7 @@ public class ManageContactPage {
 	}
 	
 	@FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']//tbody//tr[1]/td[6]") private WebElement editButton;
-	@FindBy(xpath="//p[text()='Manage Contact']//following::i[2]") private WebElement manageContactLink;
+	@FindBy(xpath="(//a[@class='small-box-footer'])[5]") private WebElement manageContactLink;
 	
 	@FindBy(xpath="//textarea[@name=\"address\"]") private WebElement addressInputField;
 	@FindBy(xpath="//button[@name='Update']") private WebElement updateButton;
@@ -47,7 +47,7 @@ public class ManageContactPage {
     }
     public void clickUpdate()
     {
-    	pageutility.scrollByAxis(driver);
+    	pageutility.scrollToEnd(driver);
     	updateButton.click();
     }
     
